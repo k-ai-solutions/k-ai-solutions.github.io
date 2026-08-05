@@ -1,0 +1,369 @@
+:root {
+  --bg: #f6f8fb;
+  --panel: rgba(255, 255, 255, 0.82);
+  --card: rgba(255, 255, 255, 0.94);
+  --text: #0f172a;
+  --muted: #526071;
+  --line: rgba(15, 23, 42, 0.10);
+  --blue: #0077cc;
+  --green: #087f5b;
+  --yellow: #9a5a00;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 5%, rgba(125, 222, 255, 0.30), transparent 31rem),
+    radial-gradient(circle at 92% 12%, rgba(190, 174, 255, 0.28), transparent 35rem),
+    radial-gradient(circle at 74% 90%, rgba(255, 184, 209, 0.20), transparent 31rem),
+    linear-gradient(180deg, #fbfdff 0%, #f4f7fb 54%, #f8f9fc 100%);
+  color: var(--text);
+}
+
+.kai-briefing-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(248, 251, 255, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.90),
+    0 10px 32px rgba(43, 60, 88, 0.07);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  backdrop-filter: blur(24px) saturate(140%);
+}
+
+.kai-briefing-nav {
+  width: min(1120px, calc(100% - 28px));
+  min-height: 66px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.kai-briefing-brand,
+.kai-briefing-back {
+  color: #14213a;
+  text-decoration: none;
+}
+
+.kai-briefing-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kai-briefing-logo-window {
+  position: relative;
+  width: 112px;
+  height: 40px;
+  overflow: hidden;
+  flex: none;
+  border: 1px solid rgba(74, 102, 138, 0.14);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 7px 20px rgba(48, 73, 105, 0.08);
+}
+
+.kai-briefing-logo-window img {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: 150%;
+  height: auto;
+  max-width: none;
+  transform: translate(-50%, -50%);
+}
+
+.kai-briefing-brand-copy {
+  display: grid;
+  line-height: 1.15;
+}
+
+.kai-briefing-brand-copy strong {
+  font-size: 14px;
+}
+
+.kai-briefing-brand-copy small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.kai-briefing-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kai-briefing-status {
+  border: 1px solid rgba(154, 90, 0, 0.20);
+  border-radius: 999px;
+  background: rgba(255, 222, 150, 0.34);
+  padding: 6px 10px;
+  color: #7a4500;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.kai-briefing-back {
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.94);
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.kai-briefing-back:hover,
+.kai-briefing-back:focus-visible {
+  border-color: rgba(0, 119, 204, 0.30);
+  background: rgba(225, 244, 255, 0.86);
+  color: #005a9c;
+}
+
+.container {
+  padding-top: 34px;
+  padding-bottom: 56px;
+}
+
+.hero,
+.summary,
+.kpi,
+.card {
+  border-color: rgba(15, 23, 42, 0.09);
+  background: var(--card);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.98),
+    0 18px 48px rgba(43, 60, 88, 0.09);
+  color: var(--text);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(89, 205, 246, 0.21), transparent 25rem),
+    radial-gradient(circle at 92% 4%, rgba(161, 137, 245, 0.18), transparent 27rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(245, 249, 255, 0.64));
+  -webkit-backdrop-filter: blur(26px) saturate(138%);
+  backdrop-filter: blur(26px) saturate(138%);
+}
+
+.hero .badge {
+  display: none;
+}
+
+.kpi .num {
+  color: #087f8c;
+}
+
+.card {
+  border-radius: 22px;
+}
+
+.thumb {
+  background: linear-gradient(145deg, #eef8ff, #eef0fb);
+  color: #246b9b;
+}
+
+.thumb img {
+  background: #f5f7fa;
+}
+
+.why {
+  border-color: rgba(154, 90, 0, 0.18);
+  background: rgba(255, 224, 158, 0.28);
+  color: #704000;
+}
+
+.link {
+  color: #006ebd;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: #004f89;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 3px solid rgba(0, 119, 204, 0.58);
+  outline-offset: 3px;
+}
+
+p {
+  color: #334155;
+}
+
+.summary span,
+.kpi .lbl,
+.meta,
+.note {
+  color: var(--muted);
+}
+
+h2 {
+  border-left-color: var(--blue);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .kai-briefing-header,
+  .hero,
+  .summary,
+  .kpi,
+  .card {
+    background-color: #ffffff;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .kai-briefing-header,
+  .hero,
+  .summary,
+  .kpi,
+  .card {
+    background: #ffffff;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .kai-briefing-header,
+  .hero,
+  .summary,
+  .kpi,
+  .card,
+  .kai-briefing-back {
+    border-color: rgba(15, 23, 42, 0.42);
+  }
+
+  .kai-briefing-brand,
+  .kai-briefing-back,
+  .hero,
+  .summary,
+  .kpi,
+  .card {
+    color: #000000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .kai-briefing-nav {
+    min-height: 60px;
+  }
+
+  .kai-briefing-brand-copy small {
+    display: none;
+  }
+
+  .kai-briefing-status {
+    padding: 5px 8px;
+    color: transparent;
+    font-size: 0;
+    white-space: nowrap;
+  }
+
+  .kai-briefing-status::after {
+    content: "已封存";
+    color: #7a4500;
+    font-size: 10px;
+  }
+
+  .kai-briefing-back {
+    padding: 8px 10px;
+  }
+
+  .container {
+    padding-top: 22px;
+  }
+
+  .hero {
+    border-radius: 22px;
+  }
+}
+
+@media (forced-colors: active) {
+  .kai-briefing-header,
+  .hero,
+  .summary,
+  .kpi,
+  .card {
+    border: 1px solid CanvasText;
+    background: Canvas;
+    color: CanvasText;
+  }
+}
+
+@media print {
+  html {
+    color-scheme: light;
+  }
+
+  *,
+  *::before,
+  *::after {
+    color: #111 !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111;
+  }
+
+  .kai-briefing-header {
+    position: static;
+    border-color: #777 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-filter: none !important;
+    filter: none !important;
+  }
+
+  .hero,
+  .summary,
+  .kpi,
+  .card {
+    border-color: #777 !important;
+    background: #fff !important;
+    break-inside: avoid;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-filter: none !important;
+    filter: none !important;
+  }
+
+  .thumb,
+  .imglabel,
+  .why {
+    border-color: #777 !important;
+    background: #fff !important;
+  }
+
+  a {
+    color: #075985 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 0.12em;
+  }
+}
