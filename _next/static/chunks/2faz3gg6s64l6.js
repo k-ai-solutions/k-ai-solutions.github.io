@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,9906,e=>{"use strict";var t=e.i(43476),i=e.i(83773),u=e.i(18102);e.s(["default",0,function(e){let{language:c}=(0,i.useLanguage)();return(0,t.jsx)(t.Fragment,{children:(0,u.pickCopy)(e,c)})}])}]);
